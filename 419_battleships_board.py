@@ -4,6 +4,8 @@ class Solution(object):
         :type board: List[List[str]]
         :rtype: int
         """
+        # NOT YET COMPELTE
+
         checked_board = list(board)
         count = 0
 
