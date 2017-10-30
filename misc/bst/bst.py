@@ -172,4 +172,12 @@ def count_trees(num):
         count += left*right
     return count
 
-print(count_trees(5))
+def is_bst(node):
+    def is_bst_recur(node, int_min, int_max):
+        if node is None:
+            return True
+        if node.val < int_min or node.val > int_max:
+            return False
+        return is_bst_recur(node.left, int_min, node.val)
+        return is_bst_recur(node.right, node.val+1, int_max)
+    return is_bst_recur(node, int_min, int_max)
